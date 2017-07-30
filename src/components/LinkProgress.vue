@@ -1,6 +1,6 @@
 <template>
     <div>
-        123
+        <Progress :percent="100"></Progress>
     </div>
 </template>
 
