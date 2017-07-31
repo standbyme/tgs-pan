@@ -21,8 +21,8 @@ export default {
 <style scoped>
 .link {
     position: absolute;
-    color: black;
-    font-size: xx-large;
+    color: white;
+    font-size: x-large;
 }
 
 
@@ -31,5 +31,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1%;
 }
 </style>

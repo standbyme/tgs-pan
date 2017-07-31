@@ -1,11 +1,16 @@
 <template>
     <div>
-        <Upload action="http://tgs-pan.oss-cn-qingdao.aliyuncs.com" ref="upload" :before-upload="handleBeforeUpload" :data="multipart_params" :show-upload-list="false">
+        <Upload class="upload" action="http://tgs-pan.oss-cn-qingdao.aliyuncs.com" ref="upload" :before-upload="handleBeforeUpload" :data="multipart_params" :show-upload-list="false" multiple>
             <Button type="primary" long>Upload</Button>
         </Upload>
-        <div v-for="file in uploadList">
-            <LinkProgress :filename="file.name" :percent="file.percentage"></LinkProgress>
-        </div>
+        <Row>
+            <Col span="16" offset="4">
+            <div v-for="file in uploadList">
+                <LinkProgress :filename="file.name" :percent="file.percentage"></LinkProgress>
+            </div>
+            </Col>
+        </Row>
+    
     </div>
 </template>
 
@@ -69,5 +74,11 @@ export default {
 <style>
 .ivu-upload-select {
     display: block;
+}
+</style>
+
+<<style scoped>
+.upload{
+    margin-bottom: 2%;
 }
 </style>

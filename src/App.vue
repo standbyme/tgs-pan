@@ -1,13 +1,17 @@
 <template>
     <div id="app">
         <Row>
-            <Col span="12">
-            <FileSet></FileSet>
+            <Col>
+            <UploadAndList></UploadAndList>
             </Col>
         </Row>
         <Row>
-            <Col span="12">
-            <UploadAndList></UploadAndList>
+            <Col span="16" offset="4">
+            <Row>
+                <Col>
+                <FileSet></FileSet>
+                </Col>
+            </Row>
             </Col>
         </Row>
     </div>
