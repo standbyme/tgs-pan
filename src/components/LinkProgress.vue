@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <Progress class="progress" :percent="100" :stroke-width="50"></Progress>
-        <a :href="url">{{filename}}</a>
+        <a class="link" :href="url">{{filename}}</a>
     </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style scoped>
-a {
+.link {
     position: absolute;
     color: black;
     font-size: xx-large;
