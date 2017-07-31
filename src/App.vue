@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <LinkProgress></LinkProgress>
+    <Row>
+        <Col span="12">
+        <LinkProgress filename="20170618222418.csv"></LinkProgress>
+        </Col>
+    </Row>
+    
   </div>
 </template>
 
@@ -21,6 +26,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

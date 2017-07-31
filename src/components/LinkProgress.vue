@@ -1,16 +1,18 @@
 <template>
-    <div>
+    <div class="container">
         <Progress class="progress" :percent="100" :stroke-width="50"></Progress>
-        <a href="http://www.baidu.com/">123123123</a>
+        <a :href="url">{{filename}}</a>
     </div>
 </template>
 
 <script>
 export default {
     name: 'LinkProgress',
+    props: ['filename'],
     data() {
         return {
-            test: `That's OK`
+            test: `That's OK`,
+            url: `http://tgs-pan.oss-cn-qingdao.aliyuncs.com/${this.filename}`
         }
     }
 }
@@ -25,5 +27,11 @@ a {
 
 .progress {
     position: absolute;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 </style>
