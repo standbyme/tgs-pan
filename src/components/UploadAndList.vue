@@ -1,10 +1,10 @@
 <template>
     <div>
-        <Upload action="http://tgs-pan.oss-cn-qingdao.aliyuncs.com" :on-progress="handleProgress" :data="multipart_params" :on-success="handleSuccess" :show-upload-list="false">
-            <Button type="success" long>Upload</Button>
+        <Upload action="http://tgs-pan.oss-cn-qingdao.aliyuncs.com" ref="upload" :before-upload="handleBeforeUpload" :data="multipart_params" :show-upload-list="false">
+            <Button type="primary" long>Upload</Button>
         </Upload>
         <div v-for="file in uploadList">
-            <LinkProgress filename="file.name" :percent="60"></LinkProgress>
+            <LinkProgress :filename="file.name" :percent="file.percentage"></LinkProgress>
         </div>
     </div>
 </template>
@@ -55,18 +55,19 @@ export default {
         }
     },
     methods: {
-        handleSuccess(response, file, fileList) {
-            console.log(this.uploadList)
-        },
-        handleProgress(event, file, fileList) {
-            file.url = `http://tgs-pan.oss-cn-qingdao.aliyuncs.com/`+file.name
-            this.uploadList.push(file)
+        handleBeforeUpload(file) {
+            file.url = `http://tgs-pan.oss-cn-qingdao.aliyuncs.com/` + file.name
         }
+    },
+    mounted() {
+        this.uploadList = this.$refs.upload.fileList;
     }
 }
 </script>
 
 
-<style scoped>
-
+<style>
+.ivu-upload-select {
+    display: block;
+}
 </style>
