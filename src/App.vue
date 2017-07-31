@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <Row>
+      <Col span="12">
+      <LinkProgress filename="20170618222418.csv" percent="40"></LinkProgress>
+      </Col>
+    </Row>
+    <Row>
+      <Col span="12">
+      <LinkProgress filename="2017.csv" percent="60"></LinkProgress>
+      </Col>
+    </Row>
+  
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import LinkProgress from './components/LinkProgress'
 
 export default {
   name: 'app',
   components: {
-    Hello
+    LinkProgress
   }
 }
 </script>
@@ -21,8 +30,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
