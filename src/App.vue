@@ -7,27 +7,21 @@
         </Row>
         <Row>
             <Col span="12">
-            <LinkProgress filename="20170618222418.csv" percent="40"></LinkProgress>
+            <UploadAndList></UploadAndList>
             </Col>
         </Row>
-        <Row>
-            <Col span="12">
-            <LinkProgress filename="2017.csv" percent="60"></LinkProgress>
-            </Col>
-        </Row>
-    
     </div>
 </template>
 
 <script>
-import LinkProgress from './components/LinkProgress'
+import UploadAndList from './components/UploadAndList'
 import FileSet from './components/FileSet'
 
 export default {
     name: 'app',
     components: {
-        FileSet,
-        LinkProgress
+        UploadAndList,
+        FileSet
     }
 }
 </script>
