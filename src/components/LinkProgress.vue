@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <Progress class="progress" :percent="100" :stroke-width="50"></Progress>
+        <Progress :percent="100" :stroke-width="50"></Progress>
         <a class="link" :href="url">{{filename}}</a>
     </div>
 </template>
@@ -25,9 +25,6 @@ export default {
     font-size: xx-large;
 }
 
-.progress {
-    position: absolute;
-}
 
 .container {
     position: relative;

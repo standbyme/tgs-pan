@@ -1,11 +1,16 @@
 <template>
   <div id="app">
     <Row>
-        <Col span="12">
-        <LinkProgress filename="20170618222418.csv"></LinkProgress>
-        </Col>
+      <Col span="12">
+      <LinkProgress filename="20170618222418.csv"></LinkProgress>
+      </Col>
     </Row>
-    
+    <Row>
+      <Col span="12">
+      <LinkProgress filename="2017.csv"></LinkProgress>
+      </Col>
+    </Row>
+  
   </div>
 </template>
 
