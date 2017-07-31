@@ -1,28 +1,40 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
-  </div>
+    <div id="app">
+        <Row>
+            <Col>
+            <UploadAndList></UploadAndList>
+            </Col>
+        </Row>
+        <Row>
+            <Col span="16" offset="4">
+            <Row>
+                <Col>
+                <FileSet></FileSet>
+                </Col>
+            </Row>
+            </Col>
+        </Row>
+    </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import UploadAndList from './components/UploadAndList'
+import FileSet from './components/FileSet'
 
 export default {
-  name: 'app',
-  components: {
-    Hello
-  }
+    name: 'app',
+    components: {
+        UploadAndList,
+        FileSet
+    }
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
 }
 </style>
