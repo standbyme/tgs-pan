@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <Progress :percent="100" :stroke-width="50"></Progress>
+        <Progress :percent="percent" :stroke-width="26" hide-info></Progress>
         <a class="link" :href="url">{{filename}}</a>
     </div>
 </template>
@@ -8,7 +8,7 @@
 <script>
 export default {
     name: 'LinkProgress',
-    props: ['filename'],
+    props: ['filename', 'percent'],
     data() {
         return {
             test: `That's OK`,
@@ -30,5 +30,6 @@ export default {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 </style>

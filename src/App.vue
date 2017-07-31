@@ -2,12 +2,12 @@
   <div id="app">
     <Row>
       <Col span="12">
-      <LinkProgress filename="20170618222418.csv"></LinkProgress>
+      <LinkProgress filename="20170618222418.csv" percent="40"></LinkProgress>
       </Col>
     </Row>
     <Row>
       <Col span="12">
-      <LinkProgress filename="2017.csv"></LinkProgress>
+      <LinkProgress filename="2017.csv" percent="60"></LinkProgress>
       </Col>
     </Row>
   
