@@ -4,7 +4,7 @@
             <Button type="success" long>Upload</Button>
         </Upload>
         <div v-for="file in uploadList">
-            <LinkProgress filename="file.name" :percent="60"></LinkProgress>
+            <LinkProgress :filename="file.name" :percent="60"></LinkProgress>
         </div>
     </div>
 </template>
