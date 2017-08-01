@@ -1,28 +1,30 @@
 <template>
-  <div>
-
-    <a :href="link" target="_blank">{{filename}}</a>
-  </div>
+    <div class="container">
+        <a :href="url" target="_blank">{{filename}}</a>
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'file',
-  props: ['fileData'],
-  data: function () {
-    let filename = this.fileData.name
-    let link = this.fileData.url
-    return {
-      filename,
-      link
+    name: 'file',
+    props: ['fileData'],
+    data: function () {
+        const filename = this.fileData.name
+        const url = this.fileData.url
+        return {
+            filename,
+            url
+        }
     }
-  }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.container {
+    word-break: break-word;
+}
+
 a {
-  font-size:200%;
+    font-size: 200%;
 }
 </style>
