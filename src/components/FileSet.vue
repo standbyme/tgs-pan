@@ -9,7 +9,6 @@
 <script>
 import File from './File'
 
-
 export default {
   name: 'FileSet',
   data: function () {
@@ -24,13 +23,10 @@ export default {
       accessKeySecret: 'qSF7aMciE5tSqBaQjyIUhMPqFdDeAG',
       bucket: 'tgs-pan'
     });
-    let url = client.signature('hello');
-    console.log(url);
     client.list({
       'max-keys': 10
     }).then((result) => {
       this.fileSetData = result.objects
-      // console.log(result)
     }).catch((err) => {
       console.log(err);
     });
@@ -41,8 +37,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-</style>

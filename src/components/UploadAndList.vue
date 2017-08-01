@@ -70,13 +70,6 @@ export default {
 }
 </script>
 
-
-<style>
-.ivu-upload-select {
-    display: block;
-}
-</style>
-
 <<style scoped>
 .upload{
     margin-bottom: 2%;

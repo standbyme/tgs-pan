@@ -11,7 +11,6 @@ export default {
     props: ['filename', 'percent'],
     data() {
         return {
-            test: `That's OK`,
             url: `http://tgs-pan.oss-cn-qingdao.aliyuncs.com/${this.filename}`
         }
     }

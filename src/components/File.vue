@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <a :href="link" target="_blank">{{filename}}</a>
   </div>
 </template>
@@ -20,7 +19,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 a {
   font-size:200%;
