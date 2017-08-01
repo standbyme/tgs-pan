@@ -19,7 +19,6 @@ export default {
   },
   created: function () {
     client.list({
-      'max-keys': 10
     }).then((result) => {
       this.fileSetData = result.objects
     }).catch((err) => {
