@@ -8,6 +8,7 @@
 
 <script>
 import File from './File'
+import { client } from '../service/OSS'
 
 export default {
   name: 'FileSet',
@@ -17,12 +18,6 @@ export default {
     }
   },
   created: function () {
-    let client = new OSS.Wrapper({
-      region: 'oss-cn-qingdao',
-      accessKeyId: 'LTAISBEyY5TsYnll',
-      accessKeySecret: 'qSF7aMciE5tSqBaQjyIUhMPqFdDeAG',
-      bucket: 'tgs-pan'
-    });
     client.list({
       'max-keys': 10
     }).then((result) => {

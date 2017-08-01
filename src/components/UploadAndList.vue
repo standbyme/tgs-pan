@@ -16,18 +16,13 @@
 
 <script>
 import LinkProgress from './LinkProgress'
-
+import {
+    OSSAccessKeyId,
+    OSSAccessKeySecret,
+    client
+} from '../service/OSS'
 let Base64 = require('js-base64').Base64
 
-let OSSAccessKeyId = 'LTAISBEyY5TsYnll'
-let OSSAccessKeySecret = 'qSF7aMciE5tSqBaQjyIUhMPqFdDeAG'
-
-let client = new OSS.Wrapper({
-    region: 'oss-cn-qingdao',
-    accessKeyId: OSSAccessKeyId,
-    accessKeySecret: OSSAccessKeySecret,
-    bucket: 'tgs-pan'
-});
 let raw_policy =
     `
         {
