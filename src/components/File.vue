@@ -9,8 +9,8 @@ export default {
   name: 'file',
   props: ['fileData'],
   data: function () {
-    let filename = this.fileData.name
-    let url = this.fileData.url
+    const filename = this.fileData.name
+    const url = this.fileData.url
     return {
       filename,
       url
