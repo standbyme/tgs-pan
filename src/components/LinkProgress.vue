@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <Progress :percent="percent" :stroke-width="26" hide-info></Progress>
-        <a class="link" :href="url">{{filename}}</a>
+        <a class="link" :href="url" target="_blank">{{filename}}</a>
     </div>
 </template>
 
