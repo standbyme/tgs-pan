@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a :href="link" target="_blank">{{filename}}</a>
+    <a :href="url" target="_blank">{{filename}}</a>
   </div>
 </template>
 
@@ -10,10 +10,10 @@ export default {
   props: ['fileData'],
   data: function () {
     let filename = this.fileData.name
-    let link = this.fileData.url
+    let url = this.fileData.url
     return {
       filename,
-      link
+      url
     }
   }
 }
