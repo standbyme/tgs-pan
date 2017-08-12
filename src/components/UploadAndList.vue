@@ -5,9 +5,7 @@
         </Upload>
         <Row>
             <Col span="16" offset="4">
-            <div v-for="file in uploadList">
-                <LinkProgress :filename="file.name" :percent="file.percentage"></LinkProgress>
-            </div>
+                <LinkProgress v-for="(file,id) in uploadList" :key="id" :filename="file.name" :percent="file.percentage"></LinkProgress>
             </Col>
         </Row>
     
