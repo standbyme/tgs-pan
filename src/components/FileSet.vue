@@ -1,8 +1,6 @@
 <template>
   <div>
-    <template v-for="fileData in fileSetData">
-      <file :fileData="fileData"></file>
-    </template>
+    <file v-for="(fileData,id) in fileSetData" :key="id" :fileData="fileData"></file>
   </div>
 </template>
 
